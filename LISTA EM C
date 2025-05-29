@@ -42,8 +42,8 @@ int main() {
     printf("Digite o total gasto pelo cliente: R$ ");
     scanf("%f", &gasto);
 
-    printf("\nOpcoes de pagamento:\n");
-    printf("1 - A vista com 10% de desconto\n");
+    printf("\nOpcões de pagamento:\n");
+    printf("1 - Á vista com 10% de desconto\n");
     printf("2 - Em 2 vezes (no valor da etiqueta)\n");
     printf("3 - De 3 ate 10 vezes com 3%% de juros ao mes (somente para compras acima de R$ 100,00)\n");
     printf("Escolha a opcao de pagamento (1, 2 ou 3): ");
@@ -56,7 +56,7 @@ int main() {
         float valor_parcela = gasto / 2;
         printf("Pagamento em 2 vezes: 2 parcelas de R$ %1.2f\n", valor_parcela);
     } else if (opcao == 3) {
-        if (total_gasto <= 100) {
+        if (gasto <= 100) {
             printf("Essa opção não é válida! Pagamento em 3 ou mais vezes so e permitido para compras acima de R$ 100,00.\n");
         } else {
             int parcelas;
