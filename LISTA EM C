@@ -36,7 +36,7 @@ Questão 28:
 #include <stdio.h>
 
 int main() {
-    float gasto;
+    float gasto, valor_desconto, valor_parcela;
     int opcao;
 
     printf("Digite o total gasto pelo cliente: R$ ");
@@ -50,10 +50,10 @@ int main() {
     scanf("%d", &opcao);
 
     if (opcao == 1) {
-        float valor_desconto = gasto - (gasto * 0.1);
+        valor_desconto = gasto - (gasto * 0.1);
         printf("Pagamento a vista: R$ %1.2f\n", valor_desconto);
     } else if (opcao == 2) {
-        float valor_parcela = gasto / 2;
+        valor_parcela = gasto / 2;
         printf("Pagamento em 2 vezes: 2 parcelas de R$ %1.2f\n", valor_parcela);
     } else if (opcao == 3) {
         if (gasto <= 100) {
