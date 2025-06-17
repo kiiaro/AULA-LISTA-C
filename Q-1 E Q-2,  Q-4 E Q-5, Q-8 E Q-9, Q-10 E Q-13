@@ -1,0 +1,146 @@
+Questão 4 -
+#include <stdio.h>
+
+int main() {
+    int n1, n2, n3, n4, n5, n6;
+    float media;
+
+    printf("Insira o primeiro numero: ");
+    scanf("%d", &n1);
+    printf("Insira o segundo numero: ");
+    scanf("%d", &n2);
+    printf("Insira o terceiro numero: ");
+    scanf("%d", &n3);
+    printf("Insira o quarto numero: ");
+    scanf("%d", &n4);
+    printf("Insira o quinto numero: ");
+    scanf("%d", &n5);
+    printf("Insira o sexto numero: ");
+    scanf("%d", &n6);
+
+    media = (n1 + n2 + n3 + n4 + n5 + n6) / 6.0;
+
+    printf("A média é: %1.2f\n", media);
+
+    return 0;
+}
+Questão 5 -
+#include <stdio.h>
+
+int main() {
+    int ano;
+    printf("Insira um ano: ");
+    scanf("%d", &ano);
+
+    if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+        printf("%d é um ano bissexto.\n", ano);
+    } else {
+        printf("%d não é um ano bissexto.\n", ano);
+    }
+
+    return 0;
+}
+Questão 7 -
+#include <stdio.h>
+
+int main() {
+    int n1, n2, n3, maior;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &n1);
+    printf("Digite o segundo numero: ");
+    scanf("%d", &n2);
+    printf("Digite o terceiro numero: ");
+    scanf("%d", &n3);
+
+    maior = n1;
+
+    if (n2 > maior) {
+        maior = n2;
+    }
+    if (n3 > maior) {
+        maior = n3;
+    }
+
+    printf("O maior numero é: %d\n", maior);
+
+    return 0;
+}
+Questão 8 -
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float numero, raiz;
+
+    printf("Digite um numero para calcular a raiz quadrada: ");
+    scanf("%f", &numero);
+
+    if (numero >= 0) {
+        raiz = sqrt(numero);
+        printf("A raiz quadrada de %1.2f é %1.2f\n", numero, raiz);
+    } else {
+        printf("Não é possível calcular a raiz quadrada de um número negativo.\n");
+    }
+
+    return 0;
+}
+Questão 10 -
+#include <stdio.h>
+
+int main() {
+    float lado1, lado2, lado3;
+
+    printf("Digite a medida do primeiro lado: ");
+    scanf("%f", &lado1);
+    printf("Digite a medida do segundo lado: ");
+    scanf("%f", &lado2);
+    printf("Digite a medida do terceiro lado: ");
+    scanf("%f", &lado3);
+
+    if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
+        if (lado1 == lado2 && lado2 == lado3) {
+            printf("O triangulo é Equilatero.\n");
+        } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+            printf("O triangulo é Isosceles.\n");
+        } else {
+            printf("O triangulo é Escaleno.\n");
+        }
+    } else {
+        printf("As medidas fornecidas nao formam um triangulo.\n");
+    }
+
+    return 0;
+}
+Questão 13 -
+#include <stdio.h>
+
+int main() {
+    int qtd_notas, i;
+    float nota, peso;
+    float soma_produtos = 0.0;
+    float soma_pesos = 0.0;
+    float media_ponderada;
+
+    printf("Quantas notas deseja inserir? ");
+    scanf("%d", &qtd_notas);
+
+    for (i = 1; i <= qtd_notas; i++) {
+        printf("Digite a nota %d: ", i);
+        scanf("%f", &nota);
+        printf("Digite o peso da nota %d: ", i);
+        scanf("%f", &peso);
+
+        soma_produtos += nota * peso;
+        soma_pesos += peso;
+    }
+
+    if (soma_pesos > 0) {
+        media_ponderada = soma_produtos / soma_pesos;
+        printf("A media ponderada é: %1.2f\n", media_ponderada);
+    } else {
+        printf("A soma dos pesos é zero.\n");
+    }
+
+    return 0;
+}
